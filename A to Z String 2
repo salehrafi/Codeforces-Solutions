@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int f,n,x=65;
+    cin >> n >> f;
+    vector <char> v;
+    for(int i=0; i<26; i++)
+    {
+        for(int j =0;j<n; j++)
+        {
+            v.push_back(x);
+        }
+        x++;
+    }
+
+    cout << v.at(f-1) << endl;
+
+    return 0;
+}
