@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+#define ll long long int
+#define fr(i,n) for (ll i=0;i<n;i++)
+#define fr1(i,n) for(ll i=1;i<=n;i++)
+#define pb push_back
+#define arrsrt(a,n) sort(a,a+n)
+#define vsrt(v) sort(v.begin(), v.end())
+#define ucase(str) transform(str.begin(), str.end(), str.begin(), ::toupper)
+using namespace std;
+
+void solve(){
+	char ch;
+	cin >> ch;
+	if(ch== 'c'||ch=='o'||ch=='d'||ch=='e'||ch=='f'||ch=='r'||ch=='s'){
+		cout << "YES" << endl;
+	}
+	else{
+		cout << "NO" << endl;
+	}
+}
+
+int main(){
+	ios::sync_with_stdio(false);
+    cin.tie(0);
+	ll t;
+	cin >> t;
+	while (t--){
+		solve();
+	}
+	return 0;
+}
