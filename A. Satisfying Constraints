@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+#define pb push_back
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    int t1=0,t2=0,t3=0;
+    while(t--)
+    {
+        int n;
+        int k_max=0,x_min=0;
+        cin >> n;
+        vector <int> a,b,c;
+        for(int i=0; i<n; i++)
+        {
+           int a1,b1;
+           cin >> a1 >> b1;
+           if(a1==1){
+            a.pb(b1);
+           }else if(a1==2){
+            b.pb(b1);
+           }else{
+            c.pb(b1);
+           }
+        }
+
+        k_max = *max_element(a.begin(),a.end());
+        x_min = *min_element(b.begin(),b.end());
+
+       // cout << k_max << " K Max" << endl;
+        //cout << x_min << " X MIN" << endl;
+        int cnt = 0;
+        for(int i=0;i<c.size();i++){
+            //if(std::count)
+            if(c.at(i) >= k_max && c.at(i)<= x_min){
+                cnt++;
+            }
+          //  cout << i << " = " << c.at(i) << endl;
+        }
+        //cout << ((x_min-k_max)-cnt)+1 << endl;
+        int res = ((x_min-k_max)-cnt)+1;
+        if(res < 0){
+            cout << "0" <<endl;
+        }else{
+        cout << res <<endl;
+        }
+    }
+}
